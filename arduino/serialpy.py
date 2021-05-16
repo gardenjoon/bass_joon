@@ -2,7 +2,7 @@ import serial
 from turtle import *
 import turtle as t
 
-arduino = serial.Serial('COM6', 250000)
+arduino = serial.Serial('COM6', 19200)
 print('통신시작')
 
 t.left(90)
