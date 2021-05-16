@@ -5,7 +5,6 @@ import turtle as t
 arduino = serial.Serial('COM6', 250000)
 print('통신시작')
 
-t.speed(2)
 t.left(90)
 
 while 1:
@@ -15,13 +14,8 @@ while 1:
   move = (left+right)/100-30
   t.fd(move)
   if (left <= 1500 and right <= 1500):
-    if (left>right):
-      t.right(10)
-    elif (left<right):
-      t.left(10)
-    else:
-      continue
-    t.backward(move)
-
-
-
+    t.bk(-move)
+  if (left>right):
+    t.right(10)
+  elif (left<right):
+    t.left(10)
